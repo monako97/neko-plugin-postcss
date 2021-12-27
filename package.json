@@ -1,0 +1,25 @@
+{
+  "name": "plugin-postcss",
+  "version": "1.0.5",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prepublishOnly": "npm version patch"
+  },
+  "keywords": [],
+  "author": "moneko",
+  "license": "ISC",
+  "dependencies": {
+    "cssnano": "^5.0.11",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.3.11",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-less": "^5.0.0",
+    "postcss-loader": "^6.2.0",
+    "postcss-plugin-px2rem": "^0.8.1",
+    "postcss-preset-env": "^7.0.1",
+    "postcss-import": "^14.0.2",
+    "postcss-light-text": "0.0.1",
+    "postcss-reporter": "^7.0.4"
+  }
+}
