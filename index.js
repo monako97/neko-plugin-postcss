@@ -3,12 +3,12 @@ const path = require("path");
 const pkgJson = require(path.resolve(process.cwd(), "./package.json"));
 const hasStylelint = Object.prototype.hasOwnProperty.call(
   pkgJson.devDependencies,
-  "plugin-stylelint"
+  "stylelint-config-neko"
 );
 
 module.exports = {
   plugins: [
-    hasStylelint && require("stylelint")(require("plugin-stylelint")),
+    hasStylelint && require("stylelint")(),
     hasStylelint &&
       require("postcss-reporter")({ clearReportedMessages: true }),
     // 更有效的引入内联样式表，并重新合并
