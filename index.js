@@ -5,14 +5,10 @@ const hasStylelint = Object.prototype.hasOwnProperty.call(
   pkgJson.devDependencies,
   "plugin-stylelint"
 );
-const stylelintrcPath = path.join(
-  __dirname,
-  "../plugin-stylelint/stylelintrc.config.js"
-);
 
 module.exports = {
   plugins: [
-    hasStylelint && require("stylelint")(require(stylelintrcPath)),
+    hasStylelint && require("stylelint")(require("plugin-stylelint")),
     hasStylelint &&
       require("postcss-reporter")({ clearReportedMessages: true }),
     // 更有效的引入内联样式表，并重新合并
