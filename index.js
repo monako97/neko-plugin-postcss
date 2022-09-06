@@ -22,7 +22,5 @@ module.exports = {
       grid: 'autoplace', // 启用-ms-Grid Layout的前缀
       overrideBrowserslist: ['> 0.15% in CN'],
     }), // 引入
-    // 删除注释等一系列css压缩处理
-    require('cssnano')(),
   ].filter(Boolean),
 };
